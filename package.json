@@ -1,12 +1,14 @@
 {
-  "name": "regex-version-app",
+  "name": "version-regex-generator",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "predeploy": "npm run build -- --configuration production --base-href /version-regex-generator/",
+    "deploy": "npx angular-cli-ghpages --dir=dist/regex-version-app"
   },
   "prettier": {
     "printWidth": 100,
@@ -37,6 +39,7 @@
     "@angular/cli": "^20.3.7",
     "@angular/compiler-cli": "^20.3.0",
     "@types/jasmine": "~5.1.0",
+    "angular-cli-ghpages": "^3.0.3",
     "jasmine-core": "~5.9.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
