@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "predeploy": "npm run build -- --configuration production --base-href /version-regex-generator/",
-    "deploy": "npx angular-cli-ghpages --dir=dist/regex-version-app"
+    "deploy": "npx angular-cli-ghpages --dir=docs/browser --branch=gh-pages"
   },
   "prettier": {
     "printWidth": 100,
